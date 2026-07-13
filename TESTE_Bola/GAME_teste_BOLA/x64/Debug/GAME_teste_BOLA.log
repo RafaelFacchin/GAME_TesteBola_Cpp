@@ -1,0 +1,4 @@
+﻿  GAME_teste_BOLA.cpp
+  MAIN_TESTE_Bola.cpp
+  Gerando Código...
+C:\Users\Trabalhos\Desktop\PROJ_Game_K\TESTE_Bola\GAME_teste_BOLA\MAIN_TESTE_Bola.cpp(3,10): error C1083: Não é possível abrir arquivo incluir: 'NGLMain.h': No such file or directory

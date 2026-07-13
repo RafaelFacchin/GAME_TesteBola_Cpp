@@ -1,0 +1,92 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: NGL - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSPC0D4.TMP" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_LIB" /Fp"Debug/NGL.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"C:\temp\bola\Ngl\NGLBrick.cpp"
+"C:\temp\bola\Ngl\NGLFrame.cpp"
+"C:\temp\bola\Ngl\NGLImage.cpp"
+"C:\temp\bola\Ngl\NGLInputManager.cpp"
+"C:\temp\bola\Ngl\NGLLayer.cpp"
+"C:\temp\bola\Ngl\NGLMain.cpp"
+"C:\temp\bola\Ngl\NGLObject.cpp"
+"C:\temp\bola\Ngl\NGLScene.cpp"
+"C:\temp\bola\Ngl\NGLSound.cpp"
+"C:\temp\bola\Ngl\NGLSoundManager.cpp"
+"C:\temp\bola\Ngl\NGLSprite.cpp"
+"C:\temp\bola\Ngl\NGLTimeAccumulator.cpp"
+"C:\temp\bola\Ngl\NGLTimeHandler.cpp"
+"C:\temp\bola\Ngl\NGLVector.cpp"
+"C:\temp\bola\Ngl\NGLVideoManager.cpp"
+"C:\temp\bola\Ngl\NGLAnimation.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPC0D4.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPC0D5.TMP" with contents
+[
+/nologo /out:"Debug\NGL.lib" 
+.\Debug\NGLBrick.obj
+.\Debug\NGLFrame.obj
+.\Debug\NGLImage.obj
+.\Debug\NGLInputManager.obj
+.\Debug\NGLLayer.obj
+.\Debug\NGLMain.obj
+.\Debug\NGLObject.obj
+.\Debug\NGLScene.obj
+.\Debug\NGLSound.obj
+.\Debug\NGLSoundManager.obj
+.\Debug\NGLSprite.obj
+.\Debug\NGLTimeAccumulator.obj
+.\Debug\NGLTimeHandler.obj
+.\Debug\NGLVector.obj
+.\Debug\NGLVideoManager.obj
+.\Debug\NGLAnimation.obj
+]
+Creating command line "link.exe -lib @C:\WINDOWS\TEMP\RSPC0D5.TMP"
+<h3>Output Window</h3>
+Compiling...
+NGLBrick.cpp
+NGLFrame.cpp
+NGLImage.cpp
+NGLInputManager.cpp
+NGLLayer.cpp
+NGLMain.cpp
+NGLObject.cpp
+NGLScene.cpp
+NGLSound.cpp
+NGLSoundManager.cpp
+NGLSprite.cpp
+NGLTimeAccumulator.cpp
+NGLTimeHandler.cpp
+NGLVector.cpp
+NGLVideoManager.cpp
+NGLAnimation.cpp
+Creating library...
+<h3>
+--------------------Configuration: Aplicacao - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSPD163.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib NGL.lib dxguid.lib ddraw.lib dsound.lib dinput.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Aplicacao.pdb" /debug /machine:I386 /out:"Debug/Aplicacao.exe" /pdbtype:sept /libpath:"..\NGL\Debug" 
+.\Debug\Main.obj
+.\Debug\MyScene.obj
+.\Debug\Aplicacao.res
+\TEMP\BOLA\NGL\Debug\NGL.lib
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPD163.TMP"
+<h3>Output Window</h3>
+Linking...
+
+
+
+<h3>Results</h3>
+Aplicacao.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
