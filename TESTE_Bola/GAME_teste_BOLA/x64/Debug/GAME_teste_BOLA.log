@@ -1,4 +1,12 @@
-﻿  GAME_teste_BOLA.cpp
-  MAIN_TESTE_Bola.cpp
+﻿  MAIN_TESTE_Bola.cpp
+C:\Users\Trabalhos\Desktop\PROJ_Game_K\TESTE_Bola\GAME_teste_BOLA\MAIN_TESTE_Bola.cpp(1,1): warning C4067: tokens inesperados após diretiva de pré-processador - esperado um newline
+C:\Users\Trabalhos\Desktop\PROJ_Game_K\TESTE_Bola\GAME_teste_BOLA\MAIN_TESTE_Bola.cpp(2,1): error C2008: '.': inesperado na definição de macro
+C:\Users\Trabalhos\Desktop\PROJ_Game_K\TESTE_Bola\GAME_teste_BOLA\MAIN_TESTE_Bola.cpp(5,10): error C1083: Não é possível abrir arquivo incluir: 'NGL.lib': No such file or directory
+  MySceneBola.cpp
+C:\Users\Trabalhos\Desktop\PROJ_Game_K\TESTE_Bola\GAME_teste_BOLA\MySceneBola.cpp(1,1): warning C4067: tokens inesperados após diretiva de pré-processador - esperado um newline
+C:\Users\Trabalhos\Desktop\PROJ_Game_K\TESTE_Bola\GAME_teste_BOLA\MySceneBola.cpp(2,1): error C2008: '.': inesperado na definição de macro
+C:\Users\Trabalhos\Desktop\PROJ_Game_K\TESTE_Bola\GAME_teste_BOLA\MySceneBola.h(1,1): warning C4067: tokens inesperados após diretiva de pré-processador - esperado um newline
+  (compilando o arquivo fonte 'MySceneBola.cpp')
+  
+C:\Users\Trabalhos\Desktop\PROJ_Game_K\TESTE_Bola\GAME_teste_BOLA\MySceneBola.cpp(5,10): error C1083: Não é possível abrir arquivo incluir: 'NGLMain.h': No such file or directory
   Gerando Código...
-C:\Users\Trabalhos\Desktop\PROJ_Game_K\TESTE_Bola\GAME_teste_BOLA\MAIN_TESTE_Bola.cpp(3,10): error C1083: Não é possível abrir arquivo incluir: 'NGLMain.h': No such file or directory
