@@ -27,7 +27,7 @@
     <ClInclude Include="GAME_teste_BOLA.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="MyScene.h">
+    <ClInclude Include="CMyScene.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
   </ItemGroup>

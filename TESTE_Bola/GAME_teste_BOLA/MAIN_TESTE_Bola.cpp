@@ -1,5 +1,5 @@
-#ifndef MAIN_TESTE_BOLA.CPP
-#define MAIN_TESTE_BOLA.CPP
+//#ifndef MAIN_TESTE_BOLA.CPP;
+//#define MAIN_TESTE_BOLA.CPP;
 
 #include <windows.h>
 
@@ -20,9 +20,8 @@
 #include "NGL/NGLVector.h"
 #include "NGL/NGLVideoManager.h"
 #include "NGL/StlFiles.h"
-#include "MyScene.h"
+#include "CMyScene.h"
 
-#include "NGL/StlFiles.h"
 
 #pragma region
 
@@ -62,8 +61,17 @@ static LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lP
 		case WM_MOVE:
 		{
 		//ATUALIZA o frame CASO a janela seja movida
-			(g_pr_Main) ? g_pr_Main->VideoManager.UpdateFrame() : 0;
-			break;
+			//VERSAO ANTIGA
+			/*(g_pr_Main) ? g_pr_Main->VideoManager.UpdateFrame() : 0;
+			break;*/
+
+			//VERSAO NOVA
+			if (g_pr_Main) 
+			{
+				g_pr_Main->VideoManager.UpdateFrame();
+				break;
+			}
+
 		}
 		case WM_PAINT:
 		{
@@ -107,10 +115,22 @@ static LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lP
 		}
 		case WM_SIZE:
 		{
-		//ATUALIZA o frame do video se a janela for redimensionada
+			//VERSAO ANTIGA! (VCR6)
+			/*ATUALIZA o frame do video se a janela for redimensionada
 			(g_pr_Main) ? g_pr_Main->VideoManager.UpdateFrame() : 0;
 			return 0;
-			break;
+			break;*/
+
+			//***VERSAO ATUALIZADA
+			// Verifica se a janela não foi minimizada antes de atualizar o frame
+			if (wParam != SIZE_MINIMIZED)
+			{
+				if (g_pr_Main)
+				{
+					g_pr_Main->VideoManager.UpdateFrame();
+				}
+			}
+			return 0;
 		}
 		case WM_ACTIVATE:
 		{
@@ -127,8 +147,17 @@ static LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lP
 					//APLIC GANHOU FOCO
 					//RESETAR o tempo da NGL p/ os objetos do jogo
 					//mantenham-se na mesma posicao qndo ao janela for desativada
-					(g_pr_Main) ? g_pr_Main->TimeHandler.Reset() : 0;
-					g_bActive = true;
+
+					//VERSAO ANTIGA
+					/*(g_pr_Main) ? g_pr_Main->TimeHandler.Reset() : 0;
+					g_bActive = true;*/
+
+					//***VERSAO NOVA
+					if (g_pr_Main) 
+					{
+						g_pr_Main->TimeHandler.Reset();
+						g_bActive = true;
+					}
 				}
 			}
 			break;
@@ -136,14 +165,30 @@ static LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lP
 		case WM_EXITMENULOOP:
 		{
 		//Qndo sair do menu da janela
-			(g_pr_Main) ? g_pr_Main->TimeHandler.Reset() : 0;
-			break;
+			//VERSOA ANTIGA
+			/*(g_pr_Main) ? g_pr_Main->TimeHandler.Reset() : 0;
+			break;*/
+
+			//VERSAO NOVA
+			if (g_pr_Main) 
+			{
+				g_pr_Main->TimeHandler.Reset();
+				break;
+			}
 		}
 		case WM_EXITSIZEMOVE:
 		{
 		//Qndo PARAR de mover OU redimensionar a janela
-			(g_pr_Main) ? g_pr_Main->TimeHandler.Reset() : 0;
-			break;
+			//VERSAO ANTIGA
+			/*(g_pr_Main) ? g_pr_Main->TimeHandler.Reset() : 0;
+			break;*/
+
+			//VERSAO NOVA
+			if (g_pr_Main)
+			{
+				g_pr_Main->TimeHandler.Reset();
+				break;
+			}
 		}
 		case WM_SYSCOMMAND:
 		{
@@ -230,7 +275,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	//ler arquivo de opções do jogo para a LIB NGL saber se 
 	//deve iniciar em Janela ou Tela Cheia
-	Level.Menu.loadOptions(&Main);
+	//Level.Menu.loadOptions(&Main);
 
 	//ADICIONA 2 cenas a LIB NGL
 	Main.AddScene(&Scene);
@@ -275,4 +320,4 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	return 0;
 }
 
-#endif // MAIN_TESTE_BOLA.CPP 
+//#endif // MAIN_TESTE_BOLA.CPP 

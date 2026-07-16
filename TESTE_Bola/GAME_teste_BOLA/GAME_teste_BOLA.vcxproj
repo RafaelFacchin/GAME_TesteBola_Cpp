@@ -134,7 +134,7 @@
   <ItemGroup>
     <ClInclude Include="framework.h" />
     <ClInclude Include="GAME_teste_BOLA.h" />
-    <ClInclude Include="MyScene.h" />
+    <ClInclude Include="CMyScene.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>

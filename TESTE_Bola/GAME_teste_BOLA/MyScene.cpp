@@ -1,27 +1,33 @@
-#ifndef MYSCENE.CPP
-#define MYSCENE.CPP
+//#ifndef MYSCENE.CPP;
+//#define MYSCENE.CPP;
 
-#include "MyScene.h"
+#include "CMyScene.h"
 #include "NGL/NGLMain.h"
 #include "NGL/NGLMain.h"
 #include "NGL/NGLScene.h"
+#include "NGL/StlFiles.h"
 #include "math.h"
+;
 
 //-----------------------------------------------------------------------------------------------------
-// NAME: CMySceneBola(void)
+// NAME: CMyScene(void)
 // DESC: Construtor padrao
 // Pams: nenhum
 //-----------------------------------------------------------------------------------------------------
-CMyScene::CMyScene(void)
+/*CMyScene:MyScene()
+{
+}*/
+CMyScene::CMyScene()
 {
 }
+;
 
 //-----------------------------------------------------------------------------------------------------
-// NAME: ~CMySceneBola(void)
+// NAME: ~CMyScene(void)
 // DESC: Destrutor
 // Pams: nenhum
 //-----------------------------------------------------------------------------------------------------
-CMyScene::~CMyScene(void)
+CMyScene::~CMyScene()
 {
 }
 
@@ -30,9 +36,9 @@ CMyScene::~CMyScene(void)
 // DESC: INICIA a cena
 // Pams: nenhum
 //-----------------------------------------------------------------------------------------------------
-bool CMyScene:Initialize(void) 
+bool CMyScene::Initialize() 
 {
-	CNGLLayer *p_Layer = CreateLayer(CNGLVector(40, 40), CNGL(1, 1));
+	CNGLLayer *p_Layer = CreateLayer(CNGLVector(40, 40), CNGLVector(1, 1));
 	p_Sprite = p_Layer->CreateSprite("Surfaces/spr_bola.bmp", CNGLVector(33, 33));
 
 	fGravity = 700.0f;
@@ -46,7 +52,7 @@ bool CMyScene:Initialize(void)
 // Pams: nenhum
 //-----------------------------------------------------------------------------------------------------
 #define FTIME pr_Main->TimeHandler.fFrameTime
-void CMyScene::Execute(void)
+void CMyScene::Execute()
 {
 	/*MOVIMENTO EM X*/
 	p_Sprite->Position.fx += Speed.fx * FTIME; 
@@ -68,4 +74,4 @@ void CMyScene::Execute(void)
 	}
 }
 
-#endif //MYSCENE.CPP
+//#endif //MYSCENE.CPP
